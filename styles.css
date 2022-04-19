@@ -125,23 +125,25 @@ p, h2 {
     width: 80px;
 }
 
-.sidebar .logo .logo-content {
+.sidebar .logo-content .logo {
     display: flex;
     width: 100%;
     align-items: center;
-    opacity: 0;
-    pointer-events: none;
+    opacity: 1;
+    white-space: nowrap;
+    transition: all 0.3s ease;
 }
 
-.sidebar.active .logo .logo-content {
-    opacity: 1;
+.sidebar.active .logo-content .logo {
+    opacity: 0;
     pointer-events: none;
+    transition: all 0.3s ease;
 }
 
 .logo-content .logo span {
     font-size: 28px;
     margin-right: 5px;
-    margin-top: 5px;
+    margin-top: 15px;
 }
 
 .logo-content .logo .logo-name {
@@ -152,7 +154,7 @@ p, h2 {
 .sidebar #sidebar-button {
     position: absolute;
     left: 90%;
-    top: 9px;
+    top: 11px;
     font-size: 20px;
     height: 50px;
     width: 50px;
@@ -182,8 +184,17 @@ p, h2 {
 .sidebar ul li a {
     display: flex;
     align-items: center;
-    transition: all 0.4 ease;
+    transition: all 0.4s ease;
     border-radius: 12px;
+}
+
+.sidebar-links-name {
+    transition: all 0.3s ease;
+}
+
+.sidebar.active .sidebar-links-name {
+    opacity: 0;
+    transition: all 0.3s ease;
 }
 
 .sidebar ul li a:hover {
@@ -214,7 +225,7 @@ p, h2 {
 
 }
 
-.content-box.active {
+.sidebar.active ~ .content-box {
     width: calc(100% - 80px);
     left: 80px;
     transition: all 0.5s ease;
@@ -225,7 +236,6 @@ p, h2 {
     font-weight: 400;
     color: whitesmoke;
     margin: 12px;
-    
 }
 
 
