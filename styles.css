@@ -245,7 +245,6 @@ p, h2 {
 footer {
     position: absolute;
     height: 20px;
-    width: calc(100% - 260px);
     left: 280px;
     top: 112%;
     margin: 25px;
