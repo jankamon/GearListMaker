@@ -9,8 +9,6 @@
         
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <script src="script.js"></script>
-
         <link rel="stylesheet" href="styles.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
@@ -21,10 +19,14 @@
 
     <body>
         <header>
-            <!--<img class="logo" src="images/logo-white.svg" alt="logo">-->
             <nav>
                 <ul class="header-nav-links">
-                    <li><a href="#">Dark Mode</a></li>
+                    <li>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                      </label>
+                    </li>
                     <li><a href="#">Languages</a></li>
                 </ul>
             </nav>
@@ -50,7 +52,7 @@
                     </div>
                     <span class="material-icons" id="sidebar-button" data-sidebar-button>menu</span>
                 </div>
-
+                <div class="sidebar-content-box">
                 <ul class="sidebar-nav-list">
                     <li>
                         <a href="#">
@@ -85,7 +87,7 @@
         </nav>
 
         <main>
-            <div class="content-box" >
+            <div class="content-box">
                 <div class="content-box-text">
                     <h1>Prance along on top of the garden fence, annoy the neighbor's dog and make it bark eat half my food and ask for more meow loudly just to annoy owners</h2>
                     <h2>See owner, run in terror push your water glass on the floor nap all day lick the plastic bag</h2>
@@ -100,5 +102,7 @@
                 Created by Jan Kamoń
             </div>
         </footer>
+
+        <script src="script.js"></script>
     </body>
 </html>

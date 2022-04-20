@@ -28,3 +28,12 @@ document.addEventListener('click', e => {
         currentSidebar.classList.toggle('active')
     }    
 })
+
+//darkmode button
+const switchButton = document.querySelector(".switch")
+
+switchButton.addEventListener("click", () => {
+    document.querySelector("body").style.backgroundColor = "#24252A"
+})
+
+

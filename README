@@ -1,9 +1,15 @@
 Gear List Maker helps you track weight of your hiking and camping gear.
 
+Check live: https://gearlistmaker.com/
+
+
+Released:
 [+] Header menu
 [+] Drop down header button
 [+] Sidebar menu
 
+
+To do:
 [-] Dark mode selector
 [-] Content box reacting to sidebar condition
 [-] Mobile friendly
