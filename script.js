@@ -33,7 +33,7 @@ document.addEventListener('click', e => {
 const switchButton = document.querySelector(".switch")
 
 switchButton.addEventListener("click", () => {
-    document.querySelector("body").style.backgroundColor = "#24252A"
+    document.querySelector("body").classList.toggle("dark")
 })
 
 

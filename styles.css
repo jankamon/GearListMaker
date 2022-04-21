@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
 
+:root {
+    --color-bg: whitesmoke;
+    --color-tx: gray;
+    --color-bx: white;
+    --color-br: white;
+    --color-hr: gray;
+    --color-ahr: white;
+}
+
 /* global styles */
 
 * {
@@ -10,14 +19,14 @@
 }
 
 body {
-    background-color: #24252A;
-    color: whitesmoke;
+    background-color: var(--color-bg);
+    color: var(--color-tx);
 }
 
 li, a, button {
     font-weight: 500;
     font-size: 16px;
-    color: #edf0f1;
+    color: var(--color-tx);
     text-decoration: none;
 }
 
@@ -26,7 +35,6 @@ header {
     justify-content: flex-end;
     align-items: center;
     padding: 20px 2%;
-
 }
 
 p, h2 {
@@ -66,6 +74,7 @@ p, h2 {
     cursor: pointer;
     transition: all 0.3s ease 0s;
     margin-left: 20px;
+    color: #edf0f1;
 }
 
 .dropdown-button:hover {
@@ -86,7 +95,7 @@ p, h2 {
     position: absolute;
     left: 0;
     top: calc(100% + .25rem);
-    background-color: #24252A;
+    background-color: var(--color-bg);
     padding: .75rem;
     border-radius: .25rem;
     box-shadow: 0 2px 5px 0 rgba(0,0,0, .1);
@@ -116,7 +125,7 @@ p, h2 {
     left: 0;
     height: 100%;
     width: 280px;
-    background-color: #11101d;
+    background-color: var(--color-bx);;
     padding: 6px 14px;
     transition: all 0.5s ease;
 }
@@ -198,9 +207,8 @@ p, h2 {
 }
 
 .sidebar ul li a:hover {
-    background: #fff;
-    color: #11101d;
-
+    background: var(--color-hr);
+    color: var(--color-ahr);
 }
 
 .sidebar ul li span {
@@ -215,27 +223,25 @@ p, h2 {
 /* content styles */
 
 .content-box {
-    position: absolute;
-    width: calc(100% - 300px);
-    left: 260px;
+    width: auto;
     margin: 25px;
-    background-color: #11101d;
-    border: 1px solid #11101d;
+    margin-left: 290px;
+    background-color: var(--color-bx);
+    border: 1px solid var(--color-br);
     border-radius: 12px;
     flex-basis: auto;
 }
 
 
 .sidebar.active ~ .content-box {
-    width: calc(100% - 80px);
-    left: 80px;
+    margin-left: 80px;
     transition: all 0.5s ease;
 }
 
 .content-box-text {
     font-size: 18px;
     font-weight: 400;
-    color: whitesmoke;
+    color: var(--color-tx);
     margin: 12px;
 }
 
@@ -315,3 +321,51 @@ footer {
   .slider.round:before {
     border-radius: 50%;
   }
+
+  /* Dark mode */
+  body.dark {
+    --color-bg: #24252A;
+    --color-tx: whitesmoke;
+    --color-bx: #11101d;
+    --color-br: #11101d;
+    --color-hr: #fff;
+    --color-ahr: #11101d;
+  }
+
+  /* body.dark a {
+    color: gray;
+  } */
+
+
+  /* body.dark {
+      background-color: whitesmoke;
+      color: gray;
+  }
+
+  body.dark .content-box {
+      background-color: white;
+      border-color: white;
+  }
+
+  body.dark .content-box-text {
+    color: gray;
+  }
+
+  body.dark .sidebar {
+    background-color: white;
+    border-color: white;
+}
+
+body.dark .sidebar ul li a:hover {
+    background: gray;
+    color: white;
+
+}
+
+body.dark a {
+    color: gray;
+}
+
+body.dark .dropdown-menu {
+    background-color: white;
+} */
